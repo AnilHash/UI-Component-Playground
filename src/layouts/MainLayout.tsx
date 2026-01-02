@@ -1,13 +1,13 @@
-import { type PropsWithChildren } from "react";
 import Logo from "../assets/react.svg";
 import "./mainLayout.style.css";
+import { Outlet } from "react-router";
 
-function MainLayout({ children }: PropsWithChildren) {
+function MainLayout() {
   const year = new Date().getUTCFullYear();
 
   return (
     <>
-      <section>
+      <section className="w-full">
         <nav className="nav">
           <p>
             <img className="logo" src={Logo} alt="website logo" />
@@ -18,7 +18,9 @@ function MainLayout({ children }: PropsWithChildren) {
             <a href="/github">Github</a>
           </section>
         </nav>
-        <main className="main">{children}</main>
+        <main className="main">
+          <Outlet />
+        </main>
         <footer className="footer">
           <section>
             <p> &copy; rights reserved - {year}</p>

@@ -1,6 +1,7 @@
 import Logo from "../assets/react.svg";
+import { pathTo } from "../utils/constants";
 import "./mainLayout.style.css";
-import { Outlet } from "react-router";
+import { Link, NavLink, Outlet } from "react-router";
 
 function MainLayout() {
   const year = new Date().getUTCFullYear();
@@ -13,9 +14,15 @@ function MainLayout() {
             <img className="logo" src={Logo} alt="website logo" />
           </p>
           <section>
-            <a href="/components">Components</a>
-            <a href="/about">About</a>
-            <a href="/github">Github</a>
+            <NavLink
+              to={pathTo.ABOUT}
+              className={({ isActive }) => (isActive ? "text-blue-400" : "")}
+            >
+              About
+            </NavLink>
+            <Link to={pathTo.GITHUB} target="_blank">
+              Github
+            </Link>
           </section>
         </nav>
         <main className="main">

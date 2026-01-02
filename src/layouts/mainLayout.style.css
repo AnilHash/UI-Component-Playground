@@ -19,6 +19,7 @@
 .nav section {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 2rem;
   width: 40%;
   a {

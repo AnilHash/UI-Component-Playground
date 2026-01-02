@@ -1,4 +1,3 @@
-import React from "react";
 import DocsPage from "../../DocsPage";
 import ModalDocs from "./ModalPageInfo";
 

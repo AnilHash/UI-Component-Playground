@@ -9,7 +9,7 @@ function MainLayout() {
   return (
     <>
       <section className="w-full">
-        <nav className="nav">
+        <nav className="w-screen top-0 nav fixed">
           <p>
             <img className="logo" src={Logo} alt="website logo" />
           </p>
